@@ -11,8 +11,6 @@ padding: 0% 1.5%;
 
 
 
-
-
 h2 {
     font-family:${MYFONTS.title};
     color: ${COLORS.secondary};   
