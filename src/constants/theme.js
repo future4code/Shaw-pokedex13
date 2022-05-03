@@ -49,19 +49,19 @@ export const theme = extendTheme({
 export const COLORS = {
     
         background: "#9FB5A3",
-        primary: "#DE4B4B",
-        secondary: "#FFCB05",
+        primary: "#DE4B4B", //vermelho
+        secondary: "#FFCB05", //amarelo
 
         font: {
-            primary: "#FFCB05",
-            secondary: "#000000",
-            alternative: "#FFFFFF"
+            primary: "#FFCB05",//amarelo
+            secondary: "#000000",//preto
+            alternative: "#FFFFFF" //branco
 
         },
 
         amarelo: {
 
-            "50": "#A38300",
+            "50": "#A38300", //amarelo.50
             "100": "#B89300",
             "200": "#CCA300",
             "300": "#E0B400",
