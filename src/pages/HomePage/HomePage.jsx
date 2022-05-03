@@ -1,13 +1,22 @@
 import { Button } from '@chakra-ui/react'
 import React, {useState, useEffect} from 'react'
-import { HomePageMainDiv } from './styled'
+import Header from '../../components/Header/Header'
+import { HomePageContentDiv, HomePageMainDiv } from './styled'
 
 
 function HomePage() {
   return (
     <HomePageMainDiv>
-      <p>HomePage</p>
-     <Button colorScheme="amarelo" >Pokedex</Button> 
+      <Header 
+      title={"Lista de Pokemon"} 
+      leftButton={"Pokedex"} 
+      rightButtonExists={false}
+      rightButton={""}
+      />
+
+      <HomePageContentDiv>
+      
+     </HomePageContentDiv>
       
       </HomePageMainDiv>
   )
