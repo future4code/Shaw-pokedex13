@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header'
 import { goToPokedex } from '../../services/Routes/coordinators'
 import { HomePageContentDiv, HomePageMainDiv } from './styled'
 // import { RequestGetPokemon } from '../../services/requests/RequestGetPokemon'
+import PokemonCard from '../../components/PokemonCard/PokemonCard'
 
 function HomePage() {
 
@@ -17,12 +18,14 @@ function HomePage() {
       fetch(url)
       .then((r) => r.json())
       .then((jason) => {
-        console.log(jason)
+        //console.log(jason)
         setPokemon(jason.results)
       })
     }
     loadApi()
   } , [])
+
+  console.log(pokemon)
 
   return (
     <HomePageMainDiv>
@@ -35,11 +38,9 @@ function HomePage() {
       />
 
       <HomePageContentDiv>
-      {pokemon.map(pokemon => {
+      {pokemon.map( (pokemon) => {
           return (
-            <ul key={pokemon.id}>
-              <li>{pokemon.name}</li>
-            </ul>
+           <PokemonCard pokemon = {pokemon} key = {pokemon.id} pokedex = {false}/>
           )
         })}
      </HomePageContentDiv>
