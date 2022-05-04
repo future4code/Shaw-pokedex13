@@ -25,14 +25,16 @@ Button {
     width: 15%; 
     border-radius: 0px; 
     border: solid black 1px; 
-    font-size: 1rem; 
+    font-size: 0.9rem; 
 }
 
 span {
     width: 15%; 
 }
 
-
+#rightButton {
+    font-size: 0.8rem;
+}
 
 
 `
