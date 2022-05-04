@@ -15,7 +15,7 @@ margin: 1.5% 3%;
 
 
 `
-
+//pokemon.sprites.front_default
 export const PokemonCardNameDiv = styled.div`
 height: 12%; 
 display: flex; 

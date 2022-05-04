@@ -6,6 +6,7 @@ import {theme} from './constants/theme'
 import AppRoutes from './services/Routes/AppRoutes'
 import "@fontsource/press-start-2p"
 import "@fontsource/bangers"
+import GlobalState from "./contexts/GlobalContext/GlobalState";
 
 
 
@@ -14,7 +15,11 @@ function App() {
    
     <ChakraProvider theme={theme}>
     <GlobalStyle/>
+
+    <GlobalState>
     <AppRoutes/>
+    </GlobalState>
+    
     </ChakraProvider>
   
     
