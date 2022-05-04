@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import Header from '../../components/Header/Header'
 import { goToLastPage } from '../../services/Routes/coordinators';
 import { PokemonPageContentDiv, PokemonPageMainDiv } from './styled'
@@ -7,15 +7,20 @@ import { PokemonPageContentDiv, PokemonPageMainDiv } from './styled'
 function PokemonPage() {
   const navigate = useNavigate(); 
 
-  let emPokedex = true; 
+
+  let {name} = useParams(); 
+  const [searchParams, setSearchParams] = useSearchParams(); 
+  let pokedexQuery = searchParams.get("pokedex"); 
+ let inPokedex = (pokedexQuery === "true" ? true: false)
+
   return (
     <PokemonPageMainDiv>
         <Header 
-        title={"PokemonPage"} 
+        title={name} 
         leftButton={"Voltar"} 
         leftButtonClick = { ()=> goToLastPage(navigate)}
         rightButtonExists={true}
-        rightButton={ emPokedex? "Liberar Pokemon": "Capturar Pokemon"}
+        rightButton={ inPokedex ? "Liberar Pokemon": "Capturar Pokemon"}
         />
   
         <PokemonPageContentDiv>

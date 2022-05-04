@@ -14,7 +14,6 @@ function GlobalState( {children} ) {
         fetch(url)
         .then((r) => r.json())
         .then((jason) => {
-          //console.log(jason)
           setPokemonList(jason.results)
         })
       }

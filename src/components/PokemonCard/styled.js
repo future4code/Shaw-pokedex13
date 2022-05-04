@@ -4,7 +4,9 @@ import { COLORS, MYFONTS } from "../../constants/theme";
 
 export const PokemonCardMainDiv = styled.div`
 min-height: 40vh; 
-width: 18vw; 
+height: 40vh;
+min-width: 18vw; 
+width: 18vw;
 display: flex; 
 flex-direction: column; 
 background-color: #D1D9DE; 
@@ -37,11 +39,12 @@ border-left: 2px solid black;
 border-right: 2px solid black; 
 
 display: flex; 
-justify-content: center; 
+justify-content: center;
+align-items: center; 
 
 img {
-    max-height: 120%; 
-    max-width: 100%; 
+    max-height: 85%; 
+    max-width: 85%; 
 }
 
 
@@ -67,7 +70,7 @@ Button{
 }
 
 #leftButton{
-    color: ${COLORS.font.secondary};
+    color: #FFFFFF;
 }     
 
 #rightButton {

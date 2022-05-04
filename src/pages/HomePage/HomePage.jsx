@@ -11,19 +11,16 @@ import { GlobalContext } from '../../contexts/GlobalContext/GlobalContext'
 function HomePage() {
 
   const navigate = useNavigate(); 
-  // const [pokemon, setPokemon] = useState([]);
   const {states, setters, requests} = useContext(GlobalContext); 
 
   let {pokemonList, pokedex} = states; 
 
-  console.log(states); 
-  console.log(pokemonList);
 
 
   return (
     <HomePageMainDiv>
       <Header 
-      title={"Lista de Pokemon"} 
+      title={"Wild Pokemons"} 
       leftButton={"Pokedex"} 
       leftButtonClick = {() => goToPokedex(navigate)}
       rightButtonExists={false}
@@ -31,7 +28,7 @@ function HomePage() {
       />
 
       <HomePageContentDiv>
-      {pokemonList && pokemonList.map( (pokemon) => {
+      {pokemonList.length>0 && pokemonList.map( (pokemon) => {
           return (
            <PokemonCard pokemon = {pokemon} key = {pokemon.id} pokedex = {false}/>
           )

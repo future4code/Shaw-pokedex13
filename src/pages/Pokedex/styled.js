@@ -26,7 +26,11 @@ Button {
 
 export const PokedexContentDiv = styled.div`
 display: flex; 
-flex-direction: column; 
-background-color: ${COLORS.background}; 
+flex-direction: row; 
+background-color: ${COLORS.background}; // 
+flex-wrap: wrap; 
+min-height: 100vh;
+height: max-content; 
+padding-top: 1%; 
 
 `
