@@ -4,11 +4,26 @@ import { useNavigate } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import { goToPokedex } from '../../services/Routes/coordinators'
 import { HomePageContentDiv, HomePageMainDiv } from './styled'
-
+// import { RequestGetPokemon } from '../../services/requests/RequestGetPokemon'
 
 function HomePage() {
 
   const navigate = useNavigate(); 
+  const [pokemon, setPokemon] = useState([]);
+
+  useEffect(() => {
+    function loadApi(){
+      let url = 'https://pokeapi.co/api/v2/pokemon/'
+      fetch(url)
+      .then((r) => r.json())
+      .then((jason) => {
+        console.log(jason)
+        setPokemon(jason.results)
+      })
+    }
+    loadApi()
+  } , [])
+
   return (
     <HomePageMainDiv>
       <Header 
@@ -20,7 +35,13 @@ function HomePage() {
       />
 
       <HomePageContentDiv>
-      
+      {pokemon.map(pokemon => {
+          return (
+            <ul key={pokemon.id}>
+              <li>{pokemon.name}</li>
+            </ul>
+          )
+        })}
      </HomePageContentDiv>
       
       </HomePageMainDiv>
