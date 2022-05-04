@@ -9,7 +9,7 @@ display: grid;
 //tamanho fixo para o header, e um fr para preencher o resto
 grid-template-rows: ${HEADER.size} 1fr; 
 min-height: 100vh;
-height: 100vh;  
+height: max-content;  
 
 
 // mudar depois
@@ -27,7 +27,11 @@ Button {
 
 export const HomePageContentDiv = styled.div`
 display: flex; 
-flex-direction: column; 
+flex-direction: row; 
 background-color: ${COLORS.background}; // 
+flex-wrap: wrap; 
+min-height: 100vh;
+height: max-content; 
+padding-top: 1%; 
 
 `
