@@ -120,3 +120,25 @@ p {
 }
 
 `
+
+
+export const PokemonPageImagemDiv = styled.div`
+/* background-color: ${COLORS.primary};  */
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+justify-content: center; 
+margin-top: 2%;
+margin-bottom: 1%; 
+width: 30%; 
+height: 60%; 
+/* border: 2px solid black;  */
+
+
+img {
+    width: 100%; 
+    height: 100; 
+}
+
+
+`

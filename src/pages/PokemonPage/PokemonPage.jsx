@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from 'react'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import Header from '../../components/Header/Header'
 import { goToLastPage } from '../../services/Routes/coordinators';
-import { PokemonPageAtaqueDiv, PokemonPageContentDiv, PokemonPageInfoDiv, PokemonPageMainDiv, PokemonPageTypesDiv } from './styled'
+import { PokemonPageAtaqueDiv, PokemonPageContentDiv, PokemonPageImagemDiv, PokemonPageInfoDiv, PokemonPageMainDiv, PokemonPageTypesDiv } from './styled'
 import { getPokemonDetail } from '../../services/requests';
 import { GlobalContext } from '../../contexts/GlobalContext/GlobalContext'
 import { Button } from '@chakra-ui/react';
@@ -11,7 +11,7 @@ import { Button } from '@chakra-ui/react';
 function PokemonPage() {
   const navigate = useNavigate(); 
   let [pokemon, setPokemon] = useState({}) 
-
+  let [showFrontPicture, setShowFrontPicture] = useState(true)
   let [displayInfoCount, setDisplayInfoCount] = useState(1); 
 
 
@@ -120,7 +120,7 @@ let displayInfo = () => {
 }
 
 let buttonText; 
-
+// console.log(pokemon.sprites && pokemon.sprites.versions["generation-v"]["black-white"].animated.back_default)
 //variavel que vai decidir o que mostrar
 let displayInfoCard; 
 
@@ -129,9 +129,13 @@ switch (displayInfoCount) {
     buttonText = "STATS"
     //logica de mostrar foto
     displayInfoCard = (
-      <PokemonPageInfoDiv>
-
-      </PokemonPageInfoDiv>
+      <PokemonPageImagemDiv>
+        {pokemon.sprites 
+        && pokemon.sprites.versions
+         && pokemon.sprites.versions['generation-v'] 
+         && pokemon.sprites.versions['generation-v']
+         && <img alt={name} src={ showFrontPicture ? (pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default) : (pokemon.sprites.versions["generation-v"]["black-white"].animated.back_default) }/> }
+      </PokemonPageImagemDiv>
     )
     break; 
 
@@ -147,10 +151,6 @@ switch (displayInfoCount) {
       })}
     </PokemonPageInfoDiv>
   )
-
-
-
-
   break; 
 
   case 3: buttonText = "Foto"
@@ -166,8 +166,6 @@ switch (displayInfoCount) {
     </PokemonPageAtaqueDiv>
    
   )
-
-
   break; 
 
   default: 
@@ -180,7 +178,9 @@ switch (displayInfoCount) {
   )
 }
 
-
+setTimeout(()=> {
+  setShowFrontPicture(!showFrontPicture)
+}, 5000)
   return (
     <PokemonPageMainDiv>
         <Header 
