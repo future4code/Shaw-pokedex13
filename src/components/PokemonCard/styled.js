@@ -23,6 +23,15 @@ margin: 1.5% 3%;
         width: 40vw; 
     }
 
+    @media (min-width: 1400px) {
+        min-height: 50vh; 
+        height: 50vh; 
+        
+        min-width: 15vw; 
+        width: 15vw; 
+    }
+
+
 
 `
 //pokemon.sprites.front_default
