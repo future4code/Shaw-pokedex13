@@ -26,7 +26,7 @@ function Pokedex() {
         <PokedexContentDiv>
         {pokedex.length > 0 && pokedex.map( (pokemon) => {
           return (
-           <PokemonCard pokemon = {pokemon} key = {pokemon.id} pokedex = {true}/>
+           <PokemonCard pokemon = {pokemon} key ={pokemon.id} pokedex = {true}/>
           )
         })}
        </PokedexContentDiv>
