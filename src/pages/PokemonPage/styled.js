@@ -176,14 +176,18 @@ width: 30%;
 height: 60%; 
 /* border: 2px solid black;  */
 
+@media (max-width: 750px) {
+    width: clamp(30%, 30% + 50%, 90%);
+    }
 
 img {
     width: 90%; 
     height: 90%; 
 
     @media (max-width: 750px) {
-        width: 120%;  
-        height: 70%; 
+        width: 100%;  
+        height: 100%; 
+        margin-bottom: 10%;
     }
 }
 

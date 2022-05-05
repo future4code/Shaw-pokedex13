@@ -180,7 +180,7 @@ switch (displayInfoCount) {
 
 setTimeout(()=> {
   setShowFrontPicture(!showFrontPicture)
-}, 5000)
+}, 4000)
   return (
     <PokemonPageMainDiv>
         <Header 
