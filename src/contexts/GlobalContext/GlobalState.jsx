@@ -3,10 +3,10 @@ import { GlobalContext } from './GlobalContext';
 
 function GlobalState( {children} ) {
 
-    //lista de pokemon na pagina principal
+    //lista de pokemon na pagina principal [16] -> adicionar charizard -> [17]
     let [pokemonList, setPokemonList] =  useState([]); 
 
-    //lista de pokemon no pokedex
+    //lista de pokemon no pokedex CHARIZARD DAQUI [4] -> tirar charizard -> [3] 
     let [pokedex, setPokedex] = useState([]); 
 
     function loadApi(){

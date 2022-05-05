@@ -12,12 +12,15 @@ import { useNavigate } from 'react-router-dom';
 function PokemonCard(props) {
   const navigate = useNavigate(); 
   let [pokemon, setPokemon] = useState({})
-  let {name, url} = props.pokemon; 
+
+  let {name, url} = props.pokemon; //pega o nome do pokemon e o url de props
   const {states, setters, requests} = useContext(GlobalContext); 
   let {setPokemonList, setPokedex} = setters; 
 
+
+  //primeira montagem chamar API para pegar os detalhes do pokemon
   useEffect( ()=> {
-  
+    //pegar informacoes detalhadas do pokemon usando url passada pelo HomePage
     getPokemonDetail(url, setPokemon); 
   }, [])
 

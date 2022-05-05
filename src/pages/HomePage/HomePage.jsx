@@ -15,7 +15,7 @@ function HomePage() {
 
   let {pokemonList, pokedex} = states; 
 
-
+//pokemon = {name: bulbasaur, url: https://pokeapi.co/api/v2/pokemon/bulbasaur }
 
   return (
     <HomePageMainDiv>
