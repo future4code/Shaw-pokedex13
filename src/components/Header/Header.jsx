@@ -18,7 +18,7 @@ function Header(props) {
     <HeaderDiv>
       <Button colorScheme="amarelo" onClick={()=> props.leftButtonClick()}>{props.leftButton}</Button>
       <h2>{props.title}</h2>
-      {props.rightButtonExists ? <Button id= "rightButton" colorScheme = "amarelo">{props.rightButton}</Button>: <span></span>}
+      {props.rightButtonExists ? <Button id= "rightButton" colorScheme = "amarelo" onClick={()=> props.rightButtonClick()}>{props.rightButton}</Button>: <span></span>}
       </HeaderDiv>
 
 
