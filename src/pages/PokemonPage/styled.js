@@ -11,7 +11,7 @@ min-height: 100vh;
 height: 100vh;  
 
 
-// mudar depois
+
 p {
     font-family: ${MYFONTS.title};
 }
@@ -41,6 +41,13 @@ Button {
     border-radius: 15px; 
     border: 2px solid black; 
 
+
+    @media (max-width: 750px) {
+        font-size: 1.4rem;  
+        max-width: 50%; 
+        padding: 5% 7%;
+    }
+
 }
 
 `
@@ -56,6 +63,13 @@ padding: 0% 3%;
 width: 30%; 
 height: 8%; 
 border: 2px solid black; 
+
+@media (max-width: 750px) {
+        width: 60%;  
+        font-size: 1.5rem; 
+        margin-top: -20%; 
+    }
+
 
 `
 
@@ -79,12 +93,26 @@ h2{
     margin-top: -2%; 
     text-decoration: underline;  
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+    @media (max-width: 750px) {
+        font-size: 2rem;  
+    }
 }
 
 p {
     font-size: 1.8rem; 
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+    @media (max-width: 750px) {
+        font-size: 1.5rem;  
+    }
 }
+
+
+@media (max-width: 750px) {
+        width: 60%;  
+        margin-bottom: 1rem; 
+    }
 
 `
 
@@ -110,6 +138,10 @@ h2{
     margin-bottom: 6%; 
     text-decoration: underline;  
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+    @media (max-width: 750px) {
+        font-size: 2rem;  
+    }
 }
 
 p {
@@ -117,7 +149,17 @@ p {
     margin-bottom: 2%; 
     padding-right: 2%; 
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+    @media (max-width: 750px) {
+        font-size: 1.5rem;  
+    }
 }
+
+
+@media (max-width: 750px) {
+        width: 60%;  
+        margin-bottom: 1rem; 
+    }
 
 `
 
@@ -138,6 +180,11 @@ height: 60%;
 img {
     width: 90%; 
     height: 90%; 
+
+    @media (max-width: 750px) {
+        width: 120%;  
+        height: 70%; 
+    }
 }
 
 

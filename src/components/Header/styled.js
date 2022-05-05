@@ -18,6 +18,10 @@ h2 {
     font-size: 2.8rem;
     stroke: black 2px; 
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+
+    @media (max-width: 750px) {
+        font-size: 1.8rem; 
+    }
 }
 
 Button {
@@ -26,14 +30,23 @@ Button {
     border-radius: 0px; 
     border: solid black 1px; 
     font-size: 0.9rem; 
+
+    @media (max-width: 750px) {
+        width: 25%;
+        font-size: 0.6rem; 
+    }
 }
 
 span {
-    width: 15%; 
+    width: 25%; 
 }
 
 #rightButton {
     font-size: 0.8rem;
+
+    @media (max-width: 750px) {
+        font-size: 0.6rem; 
+    }
 }
 
 

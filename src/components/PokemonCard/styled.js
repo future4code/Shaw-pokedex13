@@ -12,8 +12,16 @@ flex-direction: column;
 background-color: #D1D9DE; 
 /* border: 2px solid black;  */
 box-shadow: 2px 2px 2px; 
-
 margin: 1.5% 3%; 
+
+
+@media (max-width: 750px) {
+        min-height: 40vh; 
+        height: 40vh; 
+        
+        min-width: 35vw; 
+        width: 40vw; 
+    }
 
 
 `
@@ -56,6 +64,7 @@ display: flex;
 width: 100%; 
 height: 12%; 
 justify-self: flex-end; 
+ 
 
 /* justify-content: space-between;  */
 
@@ -71,11 +80,18 @@ Button{
 
 #leftButton{
     color: #FFFFFF;
+
+    @media (max-width: 750px) {
+        font-size: 0.5rem; 
+    }
 }     
 
 #rightButton {
     color:${COLORS.font.primary};
     /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    @media (max-width: 750px) {
+        font-size: 0.5rem; 
+    }
 }
 
 `

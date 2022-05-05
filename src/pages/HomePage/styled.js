@@ -12,6 +12,7 @@ min-height: 100vh;
 height: max-content;  
 
 
+
 // mudar depois
 p {
     font-family: ${MYFONTS.title};
@@ -33,5 +34,12 @@ flex-wrap: wrap;
 min-height: 100vh;
 height: max-content; 
 padding-top: 1%; 
+padding-bottom: 10%;
+
+
+
+@media (max-width: 750px) {
+        justify-content: center;  
+    }
 
 `
