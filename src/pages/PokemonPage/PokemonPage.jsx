@@ -188,7 +188,7 @@ setTimeout(()=> {
         leftButton={"Voltar"} 
         leftButtonClick = { ()=> goToLastPage(navigate)}
         rightButtonExists={true}
-        rightButton={ inPokedex ? "Liberar Pokemon": "Capturar Pokemon"}
+        rightButton={ inPokedex ? "Liberar": "Capturar"}
         rightButtonClick = { () => grabPokemon()}
         />
   
