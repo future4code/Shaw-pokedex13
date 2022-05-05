@@ -61,11 +61,62 @@ border: 2px solid black;
 
 export const PokemonPageInfoDiv = styled.div`
 background-color: ${COLORS.primary}; 
-
+display: flex; 
+flex-direction: column; 
+color: ${COLORS.secondary}; 
+align-items: center; 
+justify-content: space-evenly; 
 margin-top: 2%;
 margin-bottom: 1%; 
 width: 30%; 
 height: 60%; 
 border: 2px solid black; 
+
+
+h2{
+    font-family: ${MYFONTS.title}; 
+    font-size: 2.4rem; 
+    margin-top: -2%; 
+    text-decoration: underline;  
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+p {
+    font-size: 1.8rem; 
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+`
+
+
+export const PokemonPageAtaqueDiv = styled.div`
+background-color: ${COLORS.primary}; 
+display: flex; 
+flex-direction: column; 
+color: ${COLORS.secondary}; 
+align-items: center; 
+justify-content: flex-start; 
+margin-top: 2%;
+margin-bottom: 1%; 
+width: 30%; 
+height: 60%; 
+border: 2px solid black; 
+
+
+h2{
+    font-family: ${MYFONTS.title}; 
+    font-size: 2.4rem; 
+    margin-top: 3%; 
+    margin-bottom: 6%; 
+    text-decoration: underline;  
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+p {
+    font-size: 1.8rem; 
+    margin-bottom: 2%; 
+    padding-right: 2%; 
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
 
 `

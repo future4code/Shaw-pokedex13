@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from 'react'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import Header from '../../components/Header/Header'
 import { goToLastPage } from '../../services/Routes/coordinators';
-import { PokemonPageContentDiv, PokemonPageInfoDiv, PokemonPageMainDiv, PokemonPageTypesDiv } from './styled'
+import { PokemonPageAtaqueDiv, PokemonPageContentDiv, PokemonPageInfoDiv, PokemonPageMainDiv, PokemonPageTypesDiv } from './styled'
 import { getPokemonDetail } from '../../services/requests';
 import { GlobalContext } from '../../contexts/GlobalContext/GlobalContext'
 import { Button } from '@chakra-ui/react';
@@ -121,23 +121,63 @@ let displayInfo = () => {
 
 let buttonText; 
 
+//variavel que vai decidir o que mostrar
+let displayInfoCard; 
+
 switch (displayInfoCount) {
   case 1: 
     buttonText = "STATS"
     //logica de mostrar foto
+    displayInfoCard = (
+      <PokemonPageInfoDiv>
+
+      </PokemonPageInfoDiv>
+    )
     break; 
 
   case 2: 
   buttonText = "Ataques"
   //logica de mostrar stats
+
+  displayInfoCard = (
+    <PokemonPageInfoDiv>
+      <h2>STATS</h2>
+      { pokemon.stats && pokemon.stats.map( (stat) => {
+        return (<p>{`${stat.stat.name}: `} {stat.base_stat}</p>)
+      })}
+    </PokemonPageInfoDiv>
+  )
+
+
+
+
   break; 
 
   case 3: buttonText = "Foto"
   //logica de mostrar ataques
+
+  displayInfoCard = (
+   
+      <PokemonPageAtaqueDiv>
+      <h2>ATAQUES</h2>
+      { pokemon.abilities && pokemon.abilities.map( (ataque) => {
+        return (<p>{`- ${ataque.ability.name}`}</p>)
+      })}
+    </PokemonPageAtaqueDiv>
+   
+  )
+
+
   break; 
 
   default: 
   buttonText = "STATS"
+
+  displayInfoCard = (
+    <PokemonPageInfoDiv>
+
+    </PokemonPageInfoDiv>
+  )
 }
 
 
@@ -161,9 +201,7 @@ switch (displayInfoCount) {
 
 
 
-          <PokemonPageInfoDiv>
-
-          </PokemonPageInfoDiv>
+          {displayInfoCard}
 
 
 
