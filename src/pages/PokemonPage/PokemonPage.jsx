@@ -156,7 +156,7 @@ switch (displayInfoCount) {
 
           <PokemonPageTypesDiv>
             <p>{pokemon.types && pokemon.types[0].type.name}</p>
-            <p>{pokemon.types && pokemon.types[1].type.name}</p>
+            {pokemon.types &&  (pokemon.types.length > 1? <p>{pokemon.types[1].type.name }</p>: null) }
           </PokemonPageTypesDiv>
 
 
