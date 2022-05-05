@@ -41,5 +41,10 @@ padding-bottom: 10%;
 @media (max-width: 750px) {
         justify-content: center;  
     }
+    @media (min-width: 1400px) {
+        justify-content: center;
+    }
+
+
 
 `
