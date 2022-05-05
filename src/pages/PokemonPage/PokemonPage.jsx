@@ -19,7 +19,8 @@ function PokemonPage() {
   useEffect( ()=> {
   
     getPokemonDetail(`https://pokeapi.co/api/v2/pokemon/${name}`, setPokemon); 
-    inPokedex = searchParams.get("pokedex") === "true"
+    let myPokedex = searchParams.get("pokedex") === "true"; 
+    setInPokedex(myPokedex)
   }, [])
 
 
@@ -36,7 +37,7 @@ function PokemonPage() {
     })
 
     setPokedex(updatedPokedex)
-   setInPokedex(!inPokedex); 
+    setInPokedex(!inPokedex); 
   }
 
   else {
